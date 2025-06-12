@@ -8,9 +8,7 @@ class PetsBase(SQLModel):
     destine: str = Field(..., min_length=2, max_length=100)
     raza: str = Field(..., min_length=2, max_length=100)
     edad: int = Field(..., ge=0)
-# models_games.py
 
-# models_users.py
 
 class PetsCreate(SQLModel):
     nombre: str = Field(..., min_length=2, max_length=100)
