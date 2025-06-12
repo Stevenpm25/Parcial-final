@@ -17,11 +17,13 @@ from starlette.responses import HTMLResponse
 import jinja2
 load_dotenv()
 from models_users import User, UserWithID, UpdatedUser, UserCreate, User
+from models_mascotas import Pet, PetWithID, PetsCreate
 app = FastAPI()
 
 from operations_users import (
     read_all_users, read_one_user,
     create_user)
+from operations_mascotas import read_all_pets, read_one_pet, create_pet
 
 app = FastAPI(
     title="Parcial Final",
@@ -70,5 +72,15 @@ async def get_all_users(session: AsyncSession = Depends(get_session)):
 async def create_user_user(user: UserCreate, session: AsyncSession = Depends(get_session)):
     created_user = await create_user(session, user)
     return created_user
+
+
+@app.get("/api/pets", response_model=List[PetWithID], tags=["Mascotas"])
+async def get_all_pets(session: AsyncSession = Depends(get_session)):
+    return await read_all_pets(session)
+
+@app.post("/api/pets", response_model=PetWithID, tags=["Mascotas"])
+async def create_pet_pet(pet: PetsCreate, session: AsyncSession = Depends(get_session)):
+    created_pet = await create_pet(session, pet)
+    return created_pet
 
 
