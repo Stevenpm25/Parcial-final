@@ -2,6 +2,12 @@
 
 Se centro principalmente en solucion de la problematica asociada con la aerolinea que pretende llevar mascotas en vuelos. Solicitando construir un desarrollo funcional que permita a los usuarios reservar y comprar vuelos en los que sus mascotas son lo principal. Cualquier Usuario puede conectarse al sistema , ver vuelos disponibles y hacer reservas para viajar con su mascota y finalizar la compra, de la misma forma tambien se puede consultar la cantidad de mascotas que ya tienen un boleto comprado en el vuelo.
 
+# 💨​ Proyecto Desarrollado por:
+
+Guillermo Steven Peña Moises 🐐​
+
+Santiago Cardenas Rubio ​🫎​
+
 
 # ✨ Características Principales ✨
 
@@ -94,7 +100,7 @@ Administrador --> (Crear vuelo)
 
 - Modelo Vuelos.
 
-![imagen](https://github.com/user-attachments/assets/f8842b72-b9b6-4eda-bf8d-879c3d3dc05c)
+![imagen](https://github.com/user-attachments/assets/8b4b700b-b357-4788-ae1c-46992c61af56)
 
 
 💹​ Operaciones
@@ -114,7 +120,11 @@ Administrador --> (Crear vuelo)
 
 📡​ Conexion
 
+![imagen](https://github.com/user-attachments/assets/96983251-ef02-42a7-b899-a86311cb1954)
+
 ➿​ Router
+
+![imagen](https://github.com/user-attachments/assets/d8be6c2c-dd85-45fd-90ff-1e3815560921)
 
 
 # 📉​ Diagrama de Casos de Uso 📉​
@@ -159,5 +169,9 @@ Parcial Final/
 🚀​ Registro Vuelos
 
 ![imagen](https://github.com/user-attachments/assets/60e10dd9-af30-4b0f-9ef7-e1d9ac075aed)
+
+# 🌈​ Desplegable 🌈​
+
+https://parcial-final-1-jsbb.onrender.com/docs
 
 
