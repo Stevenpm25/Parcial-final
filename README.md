@@ -4,12 +4,17 @@ Se centro principalmente en solucion de la problematica asociada con la aeroline
 
 # ✨ Características Principales ✨
 
-  # 🏠 Interfaz desplegable y disponible para su uso: Navegacion intuitiva y facil de usar.
-  # 📱 Registro para Usuarios y mascotas de los Usuarios: Se puede crear, editar, buscar y eliminar los registrso. 
-  # ✈️​ Gestion de los vuelos: Se pueden reservar vuelos segun la disponibilidad y consultar informacion genereal.
-  # 🗃️ Múltiples Persistencias: Soporte para CSV, SQLite y PostgreSQL (en servidor de clever).
-  # 👥​🐕 Tipado de Usuario y Mascotas: Sistema de clasificación por destino, mascota, raza.
-  # 📊 Documentación: Se registra cada parte del proycto, y como fue su desarrollo.
+  🏠 Interfaz desplegable y disponible para su uso: Navegacion intuitiva y facil de usar.
+  
+  📱 Registro para Usuarios y mascotas de los Usuarios: Se puede crear, editar, buscar y eliminar los registrso. 
+  
+  ✈️​ Gestion de los vuelos: Se pueden reservar vuelos segun la disponibilidad y consultar informacion genereal.
+  
+  🗃️ Múltiples Persistencias: Soporte para CSV, SQLite y PostgreSQL (en servidor de clever).
+  
+  👥​🐕 Tipado de Usuario y Mascotas: Sistema de clasificación por destino, mascota, raza.
+  
+  📊 Documentación: Se registra cada parte del proycto, y como fue su desarrollo.
 
   
 # 🌟​ Estilo y Funcionalidades 🌟​
@@ -17,16 +22,23 @@ Se centro principalmente en solucion de la problematica asociada con la aeroline
 ​💙​✅ Versión Pre parcial.
 
   -Planteamiento de los registros.
+ 
   -Diseño para el desplegable.
+  
   -Planteamiento para la consultas de vuelos.
+  
   -Planteamiento para la reserva de los vuelos.
 
 💙​✅ Versión Construcion en parcial.
 
   -Desplegable funcional.
+  
   -Uso funcional para ambos registros.
+  
   -Operaciones de base de datos
+  
   -Consultas y reservas para vuelos funcionales.
+  
   -Estructuracion de proyecto completa.
 
 # 👔​ Modelado de las entidades 👔​
@@ -36,3 +48,15 @@ Se centro principalmente en solucion de la problematica asociada con la aeroline
 ⚙️​ Modelo Principal
 
 # 🚧​ Estructura de Proyecto ​🚥​
+
+📊​ Modelos 
+
+💹​ Operaciones
+
+📡​ Conexion
+
+➿​ Router
+
+# 📉​ Diagrama de Casos de Uso 📉​
+
+# 📈 Diagrama de Clases 📈 
