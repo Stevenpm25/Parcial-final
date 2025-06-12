@@ -60,4 +60,11 @@ Se centro principalmente en solucion de la problematica asociada con la aeroline
 # 📉​ Diagrama de Casos de Uso 📉​
 
 # 📈 Diagrama de Clases 📈 
+🧔​ Registro Usuario
+
 ![imagen](https://github.com/user-attachments/assets/8d894fcf-ff95-49a7-85b9-dc450a80994d)
+
+🐈‍⬛​ Registro Mascota 
+
+![imagen](https://github.com/user-attachments/assets/dab4f90d-cd0d-40eb-a5c9-1d81c4c6cc76)
+
