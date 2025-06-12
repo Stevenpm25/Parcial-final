@@ -2,16 +2,18 @@ from fastapi import FastAPI, Depends
 from sqlmodel import SQLModel
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
 from sqlalchemy.orm import sessionmaker
-from typing import List, Any, AsyncGenerator
+from typing import List, Any, AsyncGenerator, Optional
 from dotenv import load_dotenv
 load_dotenv()
 from models.models_users import UserWithID, UserCreate
 from models.models_mascotas import PetWithID, PetsCreate
-app = FastAPI()
-
+from models.models_vuelos import VueloWithID, VueloCreate
+from fastapi import Query
 from operations.operations_users import (
     read_all_users, create_user)
-from operations.operations_mascotas import read_all_pets, create_pet
+from operations.operations_mascotas import (
+    read_all_pets, create_pet, search_pets, get_available_flights)
+from operations.operations_vuelos import read_all_vuelos, create_vuelo
 
 app = FastAPI(
     title="Parcial Final",
@@ -74,5 +76,37 @@ async def get_all_pets(session: AsyncSession = Depends(get_session)):
 async def create_pet_pet(pet: PetsCreate, session: AsyncSession = Depends(get_session)):
     created_pet = await create_pet(session, pet)
     return created_pet
+
+
+@app.get("/api/pets/search", response_model=List[PetWithID], tags=["Mascotas"])
+async def search_pets(
+    origen: Optional[str] = Query(None),
+    destine: Optional[str] = Query(None),
+    fecha: Optional[str] = Query(None),
+    user_id: Optional[int] = Query(None),
+    session: AsyncSession = Depends(get_session)
+):
+    return await search_pets(session, origen, destine, fecha, user_id)
+
+
+@app.get("/api/vuelos", response_model=List[VueloWithID], tags=["Vuelos"])
+async def get_all_vuelos(session: AsyncSession = Depends(get_session)):
+    return await read_all_vuelos(session)
+
+@app.post("/api/vuelos", response_model=VueloWithID, tags=["Vuelos"])
+async def create_vuelo(vuelo: VueloCreate, session: AsyncSession = Depends(get_session)):
+    created_vuelo = await create_vuelo(session, vuelo)
+    return created_vuelo
+
+
+@app.get("/api/flights", tags=["Vuelos"])
+async def get_flights(
+    origen: Optional[str] = Query(None),
+    destine: Optional[str] = Query(None),
+    fecha: Optional[str] = Query(None),
+    session: AsyncSession = Depends(get_session)
+):
+
+    return await get_available_flights(session, origen, destine, fecha)
 
 
