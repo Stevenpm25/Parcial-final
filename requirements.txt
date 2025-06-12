@@ -10,3 +10,4 @@ aiofiles==23.2.1
 python-magic==0.4.27
 httpx==0.26.0
 supabase==2.15.2
+aiosqlite==0.21.0
