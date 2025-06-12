@@ -79,7 +79,7 @@ async def create_pet_pet(pet: PetsCreate, session: AsyncSession = Depends(get_se
 
 
 @app.get("/api/pets/search", response_model=List[PetWithID], tags=["Mascotas"])
-async def search_pets(
+async def search_pets_endpoint(
     origen: Optional[str] = Query(None),
     destine: Optional[str] = Query(None),
     fecha: Optional[str] = Query(None),
@@ -94,7 +94,7 @@ async def get_all_vuelos(session: AsyncSession = Depends(get_session)):
     return await read_all_vuelos(session)
 
 @app.post("/api/vuelos", response_model=VueloWithID, tags=["Vuelos"])
-async def create_vuelo(vuelo: VueloCreate, session: AsyncSession = Depends(get_session)):
+async def create_vuelo_endpoint(vuelo: VueloCreate, session: AsyncSession = Depends(get_session)):
     created_vuelo = await create_vuelo(session, vuelo)
     return created_vuelo
 
@@ -108,5 +108,6 @@ async def get_flights(
 ):
 
     return await get_available_flights(session, origen, destine, fecha)
+
 
 

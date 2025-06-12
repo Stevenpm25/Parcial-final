@@ -27,7 +27,7 @@ class PetWithID(SQLModel):
     id: int
     nombre: str
     origen: str
-    destine: str  # Nombre exacto como en la DB
+    destine: str
     edad: int
     raza: str
     fecha: date
