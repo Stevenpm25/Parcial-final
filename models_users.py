@@ -28,9 +28,9 @@ class UserWithID(SQLModel):
     id: int
     nombre: str
     origen: str
-    destino: str # Nombre exacto como en la DB
+    destine: str # Nombre exacto como en la DB
     edad: int
-class UpdatedStreamer(SQLModel):
+class UpdatedUser(SQLModel):
     nombre: str = Field(..., min_length=2, max_length=100)
     origen: str = Field(..., min_length=2, max_length=100)
     destine: str = Field(..., min_length=2, max_length=100)

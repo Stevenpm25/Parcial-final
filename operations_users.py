@@ -9,17 +9,17 @@ import csv
 from models_users import User
 
 
-async def read_all_streamers(session: AsyncSession) -> Sequence[User]:
+async def read_all_users(session: AsyncSession) -> Sequence[User]:
     result = await session.execute(select(User))
     return result.scalars().all()
 
 
 
-async def read_one_streamer(session: AsyncSession, user_id: int) -> Optional[UserWithID]:
+async def read_one_user(session: AsyncSession, user_id: int) -> Optional[UserWithID]:
     return await session.get(User, user_id)
 
 
-async def create_streamer(session: AsyncSession, user: UserCreate) -> User:
+async def create_user(session: AsyncSession, user: UserCreate) -> User:
     new_user = User(**user.dict())
     session.add(new_user)
     await session.commit()
