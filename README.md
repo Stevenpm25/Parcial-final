@@ -23,18 +23,11 @@
 
 💙​✅ Versión Construcion en parcial.
 
-    Migración a SQLAlchemy
-    Conexiones asíncronas
-    Operaciones de base de datos
-    Manejo de sesiones
+  -Desplegable funcional.
+  -Uso funcional para ambos registros.
+  -Operaciones de base de datos
+  -Consultas y reservas para vuelos funcionales.
+  -Estructuracion de proyecto completa.
 
-✅ Versión 2.0 - Modern Stack (Actual)
-
-    SQLModel para ORM moderno
-    Integración con Supabase
-    Interfaz web con Jinja2
-    Subida de imágenes
-    Sistema de enums para tipos
-    Soft delete functionality
-    Templates responsivos con Bulma
+# 👔​ Modelado de las entidades 👔​
 
