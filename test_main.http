@@ -9,3 +9,21 @@ GET http://127.0.0.1:8000/hello/User
 Accept: application/json
 
 ###
+
+# Test para crear usuario
+POST http://127.0.0.1:8000/api/users
+Content-Type: application/json
+
+{
+  "nombre": "Juan Perez",
+  "origen": "Bogotá",
+  "destine": "Medellín",
+  "edad": 30
+}
+
+###
+# Test para obtener todos los usuarios
+GET http://127.0.0.1:8000/api/users
+Accept: application/json
+
+###

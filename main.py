@@ -6,7 +6,7 @@ from sqlmodel import SQLModel, select
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine, session
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import text
-from typing import Optional, List, Dict
+from typing import Optional, List, Dict, Any, AsyncGenerator
 import os
 import csv
 import io
@@ -80,39 +80,18 @@ except Exception as e:
 
 
 # Dependency
-async def get_session() -> AsyncSession:
+async def get_session() -> AsyncGenerator[Any, Any]:
     async with async_session() as session:
         yield session
 
 
-app.post("/api/users", response_model=UserWithID, tags=["Games"])
-async def create_new_game(
-        nombre: str = Form(..., description="Nombre del pasajero"),
-        origen: str = Form(..., description="Origen del pasajero"),
-        destine: str = Form(..., description="Destino del pasajero"),
-        edad: int = Form(..., description="Edad"),
-
-):
-
-    try:
-
-        UserCreate(
-            nombre=nombre,
-            origen=origen,
-            destine=destine,
-            edad=edad,
-
-        )
-
-    except Exception as e:
-        raise HTTPException(
-            status_code=500,
-            detail=f"Error al crear el juego: {str(e)}"
-        )
-
-
-@app.get("/api/users", response_model=List[UserWithID], tags=["Games"])
-async def get_all_games(session: AsyncSession = Depends(get_session)):
+@app.get("/api/users", response_model=List[UserWithID], tags=["Users"])
+async def get_all_users(session: AsyncSession = Depends(get_session)):
     return await read_all_users(session)
+
+@app.post("/api/users", response_model=UserWithID, tags=["Users"])
+async def create_user(user: UserCreate, session: AsyncSession = Depends(get_session)):
+    created_user = await create_user(session, user)
+    return created_user
 
 
