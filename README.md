@@ -14,14 +14,14 @@
   
 # 🌟​ Estilo y Funcionalidades 🌟​
 
-​🟩​ ✅ Versión 1.0 - File Era
+​💙​✅ Versión Pre parcial.
 
-    Modelos Pydantic básicos
-    Operaciones CRUD con CSV
-    Validación de datos
-    API endpoints básicos
+  -Planteamiento de los registros.
+  -Diseño para el desplegable.
+  -Planteamiento para la consultas de vuelos.
+  -Planteamiento para la reserva de los vuelos.
 
-✅ Versión 1.5 - Database Bridge
+💙​✅ Versión Construcion en parcial.
 
     Migración a SQLAlchemy
     Conexiones asíncronas
