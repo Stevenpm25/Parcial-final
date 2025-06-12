@@ -50,6 +50,10 @@ async_session = sessionmaker(
     expire_on_commit=False
 )
 
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("main:app", host="0.0.0.0", port=10000, reload=True)
+
 
 # Inicializa la base de datos si es SQLite
 @app.on_event("startup")
