@@ -60,3 +60,4 @@ Se centro principalmente en solucion de la problematica asociada con la aeroline
 # 📉​ Diagrama de Casos de Uso 📉​
 
 # 📈 Diagrama de Clases 📈 
+![imagen](https://github.com/user-attachments/assets/8d894fcf-ff95-49a7-85b9-dc450a80994d)
