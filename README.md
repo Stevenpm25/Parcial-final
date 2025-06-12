@@ -1,4 +1,40 @@
-# Parcial Final 
+# ✨ Parcial Final ✨ 
 
-# Se centro principalmente en solucion de la problematica asociada con la aerolinea que pretende llevar mascotas en vuelos. Solicitando construir un desarrollo funcional que permita a los usuarios reservar y comprar vuelos en los que sus mascotas son lo principal. 
-# Cualquier Usuario puede conectarse al sistema , ver vuelos disponibles y hacer reservas para viajar con su mascota y finalizar la compra, de la misma forma tambien se puede consultar la cantidad de mascotas que ya tienen un boleto comprado en el vuelo.
+# Se centro principalmente en solucion de la problematica asociada con la aerolinea que pretende llevar mascotas en vuelos. Solicitando construir un desarrollo funcional que permita a los usuarios reservar y comprar vuelos en los que sus mascotas son lo principal. Cualquier Usuario puede conectarse al sistema , ver vuelos disponibles y hacer reservas para viajar con su mascota y finalizar la compra, de la misma forma tambien se puede consultar la cantidad de mascotas que ya tienen un boleto comprado en el vuelo.
+
+# ✨ Características Principales ✨
+
+  # 🏠 Interfaz desplegable y disponible para su uso: Navegacion intuitiva y facil de usar.
+  # 📱 Registro para Usuarios y mascotas de los Usuarios: Se puede crear, editar, buscar y eliminar los registrso. 
+  # ✈️​ Gestion de los vuelos: Se pueden reservar vuelos segun la disponibilidad y consultar informacion genereal.
+  # 🗃️ Múltiples Persistencias: Soporte para CSV, SQLite y PostgreSQL (en servidor de clever).
+  # 👥​🐕 Tipado de Usuario y Mascotas: Sistema de clasificación por destino, mascota, raza.
+  # 📊 Documentación: Se registra cada parte del proycto, y como fue su desarrollo.
+
+  
+# 🌟​ Estilo y Funcionalidades 🌟​
+
+​💙​✅ Versión Pre parcial.
+
+  -Planteamiento de los registros.
+  -Diseño para el desplegable.
+  -Planteamiento para la consultas de vuelos.
+  -Planteamiento para la reserva de los vuelos.
+
+💙​✅ Versión Construcion en parcial.
+
+    Migración a SQLAlchemy
+    Conexiones asíncronas
+    Operaciones de base de datos
+    Manejo de sesiones
+
+✅ Versión 2.0 - Modern Stack (Actual)
+
+    SQLModel para ORM moderno
+    Integración con Supabase
+    Interfaz web con Jinja2
+    Subida de imágenes
+    Sistema de enums para tipos
+    Soft delete functionality
+    Templates responsivos con Bulma
+
