@@ -1,19 +1,17 @@
-from fastapi import FastAPI, Depends, Request, HTTPException, Query, UploadFile, File, Form, Body
-from sqlmodel import SQLModel, select
-from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine, session
+from fastapi import FastAPI, Depends
+from sqlmodel import SQLModel
+from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import text
-from typing import Optional, List, Dict, Any, AsyncGenerator
+from typing import List, Any, AsyncGenerator
 from dotenv import load_dotenv
 load_dotenv()
-from models_users import User, UserWithID, UpdatedUser, UserCreate, User
-from models_mascotas import Pet, PetWithID, PetsCreate
+from models.models_users import UserWithID, UserCreate
+from models.models_mascotas import PetWithID, PetsCreate
 app = FastAPI()
 
-from operations_users import (
-    read_all_users, read_one_user,
-    create_user)
-from operations_mascotas import read_all_pets, read_one_pet, create_pet
+from operations.operations_users import (
+    read_all_users, create_user)
+from operations.operations_mascotas import read_all_pets, create_pet
 
 app = FastAPI(
     title="Parcial Final",

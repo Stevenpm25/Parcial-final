@@ -1,7 +1,7 @@
-from typing import Optional, List, Any, Sequence
+from typing import Sequence
 from sqlmodel import select
 from sqlalchemy.ext.asyncio import AsyncSession
-from models_mascotas import *
+from models.models_mascotas import *
 
 async def read_all_pets(session: AsyncSession) -> Sequence[Pet]:
     result = await session.execute(select(Pet))

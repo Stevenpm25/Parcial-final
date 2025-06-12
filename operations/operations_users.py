@@ -1,12 +1,9 @@
-from typing import Optional, List, Any, Coroutine, Sequence
+from typing import Sequence
 from sqlmodel import select
 from sqlalchemy.ext.asyncio import AsyncSession
-from models_users import *
-from fastapi import UploadFile
-import os
-import csv
+from models.models_users import *
 
-from models_users import User
+from models.models_users import User
 
 
 async def read_all_users(session: AsyncSession) -> Sequence[User]:
