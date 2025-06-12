@@ -9,7 +9,7 @@ class UserBase(SQLModel):
     edad: int = Field(..., ge=0)
 # models_games.py
 
-# models_streamers.py
+# models_users.py
 
 class UserCreate(SQLModel):
     nombre: str = Field(..., min_length=2, max_length=100)

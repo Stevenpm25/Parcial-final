@@ -1,0 +1,28 @@
+from typing import Optional, List, Any, Coroutine, Sequence
+from sqlmodel import select
+from sqlalchemy.ext.asyncio import AsyncSession
+from models_users import *
+from fastapi import UploadFile
+import os
+import csv
+
+from models_users import User
+
+
+async def read_all_streamers(session: AsyncSession) -> Sequence[User]:
+    result = await session.execute(select(User))
+    return result.scalars().all()
+
+
+
+async def read_one_streamer(session: AsyncSession, user_id: int) -> Optional[UserWithID]:
+    return await session.get(User, user_id)
+
+
+async def create_streamer(session: AsyncSession, user: UserCreate) -> User:
+    new_user = User(**user.dict())
+    session.add(new_user)
+    await session.commit()
+    await session.refresh(new_user)
+    return new_user
+
