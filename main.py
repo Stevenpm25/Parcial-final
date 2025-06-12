@@ -93,10 +93,7 @@ async def create_new_game(
         edad: int = Form(..., description="Edad"),
 
 ):
-    """
-    Crear un nuevo juego con imagen opcional.
-    La imagen se subirá a Supabase si se proporciona.
-    """
+
     try:
 
         UserCreate(
