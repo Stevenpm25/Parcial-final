@@ -1,20 +1,10 @@
 from fastapi import FastAPI, Depends, Request, HTTPException, Query, UploadFile, File, Form, Body
-from fastapi.staticfiles import StaticFiles
-from fastapi.templating import Jinja2Templates
-from fastapi.responses import HTMLResponse, RedirectResponse, JSONResponse
 from sqlmodel import SQLModel, select
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine, session
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import text
 from typing import Optional, List, Dict, Any, AsyncGenerator
-import os
-import csv
-import io
-import datetime
-import random
 from dotenv import load_dotenv
-from starlette.responses import HTMLResponse
-import jinja2
 load_dotenv()
 from models_users import User, UserWithID, UpdatedUser, UserCreate, User
 from models_mascotas import Pet, PetWithID, PetsCreate
@@ -55,14 +45,14 @@ if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=10000, reload=True)
 
 
-# Inicializa la base de datos si es SQLite
+
 @app.on_event("startup")
 async def on_startup():
     async with engine.begin() as conn:
         await conn.run_sync(SQLModel.metadata.create_all)
 
 
-# Dependency
+
 async def get_session() -> AsyncGenerator[Any, Any]:
     async with async_session() as session:
         yield session
